@@ -1,14 +1,13 @@
 package com.techproed;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-public class Day02DriverMethods {
+public class Day02_DriverMethods {
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver", "/Users/kemalgurler/Documents/selenium libraries/drivers/chromedriver");
-
+        System.setProperty("webdriver.chrome.driver" , "C:\\Users\\isimsiz\\selenium dependencies\\selenium\\drivers\\chromedriver.exe");
         WebDriver webDriver = new ChromeDriver();
-        webDriver.get("https://google.com");
+
+        // google.com'a gittik
+        webDriver.get("http://google.com");
         webDriver.navigate().to("http://amazon.com");
 
         String sayfaTitle = webDriver.getTitle();
@@ -17,8 +16,6 @@ public class Day02DriverMethods {
         System.out.println(sayfaTitle);
         System.out.println(sayfaUrl);
 
-
-
+        webDriver.quit();
     }
-
 }
