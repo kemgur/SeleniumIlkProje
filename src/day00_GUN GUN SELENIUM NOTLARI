@@ -1,0 +1,35 @@
+
+
+Selenium 4. Ders (3.Dersin Ozeti)
+Locators: Konum bulucular,
+1) id
+2) name
+3)
+4)
+5)
+6)
+7)
+8)
+
+TAGNAME NEDIR?
+<> icerisindeki ilk kelimedir.
+ORNEK: <input class="deneme" /> Bu ornekte tagname: input'tur.
+
+ATTRIBUTE NEDIR? Ustteki satirdaki class="deneme"'nin icersinde "class=" bir attribute'tur.
+
+WEBELEMENT NEDIR? Web sayfasinda gordugumuz tum elemanlara denir.
+Ayni zamanda drlrnium'da o elemanlarin veritipidir.
+
+FINDELEMENT NEDIR? findelement(), bir webelementi bulmak icin kullandigimiz methodtur.
+FINDELEMENTS NEDIR? findelements(), aradigimiz ozelliklere uygun tum webelementlerini  bulur.
+
+driver.manage().timeouts().implicitlyWait: sayfanin yuklenmesini bekler.
+
+ sentKeys(): Yazi gondermek icin kullanilan method'tur
+ click(): webelement'e tiklamak icin kullaniriz.
+ By.id("deger")
+ By.name("deger")
+ ****************************
+ Selenium 4. DERS BASLIYOR.
+
+ NoSuchElementException=> Boyle bir element bulamadim hata bildirimi.
