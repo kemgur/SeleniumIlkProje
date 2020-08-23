@@ -10,18 +10,18 @@ public class day01_IlkDers {
         System.setProperty("webdriver.chrome.driver","/Users/kemalgurler/Documents/selenium libraries/drivers/chromedriver");
 
         //selenium ile ilgili ilk kodumuz.
-        //webDriver nesnesi olusturarak,
+        //webDriver nesnesi(objesi) olusturarak,
         //chrome driver kullanabilir hale geldik.
         WebDriver webDriver = new ChromeDriver();
-
-        //
+        //driver'imiza google.com'a gitmesini soyledik.
         webDriver.get("https://google.com");
+        //get komutu ile tum websayfalarini acabiliriz.
 
         //Driverimizdeki acik olan pencereyi kapatir
-        //webDriver.close();
+        webDriver.close();
 
         //deriverimizi tum pencereleri kapatir.
-        //webDriver.quit();
+        webDriver.quit();
 
 
 

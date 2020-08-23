@@ -3,7 +3,7 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Day02_NavigationMethods {
+public class Day02_06_NavigationMethods {
 
     public static void main(String[] args) {
         // 1.adim: driver tanitmak

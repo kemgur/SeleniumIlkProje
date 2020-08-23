@@ -1,4 +1,69 @@
+ Selenium 1. DERS BASLIYOR.
 
+ SELENIUM KUTUPHANESINI PROJEMIZE EKELEMEK:
+ =>File-> Project Structure -> Modules -> Depencencies ->  + isaretini tikla - JARs or directories'e tikla - Indirdigimiz kutuphaneyi ekle
+
+       // java projemize chromedriver' i tanittik.
+     System.setProperty("webdriver.chrome.driver","/Users/kemalgurler/Documents/selenium libraries/drivers/chromedriver");
+
+     WebDriver webDriver = new ChromeDriver();
+        //driver'imiza google.com'a gitmesini soyledik.
+
+     webDriver.get("https://google.com");
+        //get komutu ile tum websayfalarini acabiliriz.
+
+        //Driverimizdeki acik olan pencereyi kapatir
+     webDriver.close();
+
+        //deriverimizi tum pencereleri kapatir.
+     webDriver.quit();
+
+OZETLE;
+        get: yazdigimiz url(adres)'in acilmasini saglar.
+        close: acik olan pencereyi kapatir
+        quit: Acik olan driver ve tum pencereleri kapatir.
+
+        =================================================
+ Selenium 2. DERS BASLIYOR.
+ driver.navigate().to("http://youtube.com"); // get 'te kullanılabilir
+        // navigate().to() methodu get() methodu ile ayni islemi yapar.
+
+        driver.navigate().back();// Bir onceki sayfaya geri donmeye yarar.
+
+        driver.navigate().forward();// geri geldigimiz sayfaya tekrar gitmemizi saglar.
+
+        driver.navigate().refresh();// sayfayi yenilemeye yariyor.
+
+        driver.quit();// Tum sayfalari kapatir.
+        manage(),window().maximize(); // Driver ekrani kaplar.
+
+        String sayfaTitle = webDriver.getTitle();// Sayfanin basligini alabilir
+        String sayfaUrl   = webDriver.getCurrentUrl();// Sayfanin adresini alir.
+
+        =================================================
+ Selenium 3. DERS BASLIYOR.
+<input type="email" class="form-control" placeholder="Email">
+Bir web sayfasindaki webelement'ler bu sekilde gorunur.
+<> => Webelement body'si
+
+tagName: <'den sonra gelen ilk gelen kelime veya harf tagName'dir.
+attribute(ozellik):Onunde = isareti olan tum kelimeler.(type=, class=, placeholder=,id= )
+value(deger): Attribute'lerin icine yazilan ve tirnak icerisinde olan tum degerlerdir.
+Ornek: "email","form-control","Email"...vb
+
+driver.manage().timeout().implicitlyWait(10000, TimeUnit.MILLISECONDS);
+***Driver'a sayfanin yuklenmesini 10 saniye boyunca beklemesini soyluyor.
+sayfa oncesinde yuklenirse beklemeyi birakiyor.
+
+findElement: webelement'i bulmamizi saglar.
+findElement: webelement'i  bulmamizi saglar.(ayni ozellikte olan)
+sendK eys(): webelement'in icerisine yazi yazar.
+locator: webelement'leri bulmamiza yarayan 8 farkli locator bulucu vardir.
+         (id,name,classname,linktext,partiallinktext,tagname,xpath,css)
+click: Bir webelemente yiklamamizi saglar.
+
+ SOFTWARE TESTING NEDIR?
+ Expekted Result(Beklenen Sonuc)'in Actual Resulta(gercek sonuc)'a esit olup olmadigini kontrol etme islemidir.
 
 Selenium 4. Ders (3.Dersin Ozeti)
 Locators: Konum bulucular,
@@ -29,7 +94,55 @@ driver.manage().timeouts().implicitlyWait: sayfanin yuklenmesini bekler.
  click(): webelement'e tiklamak icin kullaniriz.
  By.id("deger")
  By.name("deger")
+
  ****************************
  Selenium 4. DERS BASLIYOR.
 
- NoSuchElementException=> Boyle bir element bulamadim hata bildirimi.
+ NoSuchElementException=> Boyle bir element bulamadim hata bildirimi. Aradiginiz ozelliklerde
+ bir webelement bulunamadi hatasi. Eger boyle bir hatayla karsilasirsaniz, o webelementi bulamadiginiz,
+ yani bir hiz problemi ya da eger locator'i dogru yazmadiysaniz birgi yanlisligi vardir.
+
+Class attribute’inin icerisinde bosluk varsa, icerisinde iki class var demektir.
+Boyle durumlarda class attribute'ini kullanamayiz.
+
+By.id             : id attribute'e gore arama yapiyor
+By.name           : name attribute'e gore arama yapiyor.
+By.className      : Class attribute'u kullanarak webelement bulabiliriz
+By.tagname       : webelementin tag ismine gore arama yapiyor.
+By.linkText       : Bir linki, linkin yazisini kullanarak bulabiliriz.
+By.partialLinkText: Linkin icerdigi harflere, karakterlere gore webelementi bulmamizi saglar.
+findelement()     : Bir sayfada aradigimiz ozelliklere uygun tum webelementleri bulmamizi saglar
+get.text()        : Buldugumuz webelementin yazisini alir.
+By.tagName        : tagName'e gore webelementi bulmamizi saglar.
+submit()          : Formu onaylayip, gonderme(Bir nevi enter gorevi)
+get.text          : Buldugumuz webelementin yazisini alir.
+Buldugumuz webelementlerinin yazisini sout ile yazdirabiliriz.
+
+ //System.out.println(homeLinki.getText());//Home=> Dogru elemani bulup bulmadigimizi check edebiliriz.
+
+ ****************************
+ Selenium 5. DERS BASLIYOR.
+ xpath: Bulmak istediginiz webelement'in adresini yazarak o webelementi yazabilirsiniz.
+   1) Absolute xpath(mutlak):Bu xpath turu cok yaygin degildir
+
+   2) Relative xpath(bagil): Bu xpath turu cok yaygindir//This type of xpath is very common.
+    Relative xpath’in soz dizimini (syntax) yaziniz.
+   ***EZBERLE: ==> //tagName[@attribute= ‘value’]
+<input type="email" class="form-control form" placeholder="Email" data-test="email" name="session[email]" id="session_email">
+xpath : //input[@class='form-control form']
+id    : id="session_email"
+xpath ile birden fazla attribute kullanarak arama da yapabiliriz.
+			and             			or
+tüm attributeleri sağlamalı		herhangi birini sağlasa yeterli
+//div[@id='logo' or @class='flex-col logo']
+//div[@id='logo' and @class='flex-col logo']
+xpath ile array gibi bir yapı oluşturabilirsiniz ve bir sonraki elemente gidebilirsiniz.
+(//input[@class='form-control form'])[2] - örnek kullanım
+-------------------------------------------------------------
+//input[@type='email'] -> tagName input olan, attribute olarak type='email'
+//*[@type='email'] -> tagName ne olursa olsun, attribute olrk type='email'
+					  type='email' e sahip tüm webelementleri bulur.
+//*[.='Sign up'] -> içerdiği yazı Sign up olan tüm webelementleri bulur.
+//*[(text()='Sign up')] -> üsttekinin aynısı
+//div[.='Sign up'] -> içerdiği yazı Sign up olan ve tagnamei "div" tüm webelementleri bulur.
+//*[contains(text(),'ign')]  -> içerisinde "ign" geçen tüm elementleri bulur. (örnek : Sign in ya da Sign out' u bulabilir.)

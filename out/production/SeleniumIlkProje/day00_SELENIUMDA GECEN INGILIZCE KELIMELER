@@ -1,4 +1,75 @@
-
-
+Selenium, web uygulamalarını farklı tarayıcılarda ve platformlarda test etmek için ücretsiz (açık
+kaynaklı) bir araçtır.
+Actual Result: Gercek sonuc
+Access: Giris
+Accurate: Dogru, kesin, tam
+Attribute-(etrabiyut):(v) baglamak, atfetmek, (n)ozellik, sifat, nitelik.
+Approx salary : Yaklasik maas
+Alumni-(Elumnay): Mezunlar
+salary slip: Maas bodrosu
+quicker: daha hizli
+case sensitive: harfe duyarli,
+complete-(kImpliid): (f)tamamlamak, bitirmek, uygulamak, tamamlanmis,
+certain-(körtiin): (a) belirli
+click: tiklamak,
+create Session: Oturum olustur,
+Expected Result: Beklenen sonuc
+Execution Time: Uygulama vakti
+exact: kesin
+data science: Veri bilimi,
+Defect: Kusur, hata,
+definition: tanim ve tanitim,
+dice: Zar,
+dice number of opening: Zar acilis sayisi
+depencency: Bagimlilik
+doc type: Belge turu,
+forward: ileri, ileriye, öne, ileriye dogru, ilerideki, (f)yollamak, gondermek, yeni adrese gondermek
+gola: hedef,
+handle captcha-(hendIl kepçe): El ile onay sifresi girmek
+id: Bir locators'tir. webelementlerin id attribute'u kullanarak element bulunabilir.
+infrastructure-(infstrakçir): Altyapi
+improve: Gelistirme, iyilestirme,
+invoke: çagirmak,
+impediment: engel
+involved-(invold): dagil,
+install: (v)kurmak, yerlestirmek, yuklemek,
+inspect: (v) denetlemek, incelemek, teftis etmek, yoklamak
+implicitly-(implisitli): dolayli olarak, ustu kapali olarak,
+Locator: Bulucu, yer bulucu, konum belirleyici,
+merged-(mörc): birlesmis
+misconception-(miskinsepšIn): yanlis kani,
+necessary-(nessIseri):gerekli,
+object: nesne,
+partialLink-(paršIllink): kismi baglanti,
 Property: ozellik, nitelik, servet, emlak
- 
+Properties: özellikler
+Precise-(pIrsayz):(a) kesin, kusursuz,
+Protocol Handshake: Protokol el sIkIšmasi,
+Priority-(prayoriti): öncelik,
+Refresh: (f) yenilemek, tazelemek,
+Respect-(rispekt): saygi
+session-(sešIn): oturum, donem, toplanti,
+scripts: Kodlar
+sibling: kardes,
+simplified-(simplifayd): basitlestirilmis.
+skill: beceri,
+Structure: Yapi, bina, (f)planlamak, butun olarak dusunmek,
+suggestions-(sIgceššIn): oneri, telkin, onerme, tavsiye,
+Task: (n)Gorev, is, odev, (v) is vermek, calistirmak, yormak,
+Test Otomasyonu: Bir sistemi bir otomasyon aracı yardımıyla test etmeye
+                 ‘Test Otomasyonu’ denir.
+Termination: Sonlandirma,
+Tools: Araclar
+turnaround time: Ger donus suresi
+training-(treyning): Egitim
+tanitmak: introduce(introdus), acquaint(bilgi vermek);
+ Functional Testing (Fonksiyonel)
+=>○ Smoke Test (Duman Testi)
+=>○ Regression Test: Baglama testi
+=>○ UAT ( User Acceptance Testing)(Kullanici Kabul Testi)
+=>○ Integration Test (Entegrasyon)
+
+components of selenium: Selenium bilesenleri
+unique-(yuniik): benzersiz, essiz, nadir sey, tek, ozgun,
+Verification: Dogrulama, denetim,
+Voluntary(valinteri) activities: Gönullu aktiviteler
