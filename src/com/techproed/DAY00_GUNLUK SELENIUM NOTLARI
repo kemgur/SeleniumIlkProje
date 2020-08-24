@@ -1,4 +1,4 @@
- Selenium 1. DERS BASLIYOR.
+Selenium 1. DERS BASLIYOR.
 
  SELENIUM KUTUPHANESINI PROJEMIZE EKELEMEK:
  =>File-> Project Structure -> Modules -> Depencencies ->  + isaretini tikla - JARs or directories'e tikla - Indirdigimiz kutuphaneyi ekle
@@ -128,10 +128,12 @@ Buldugumuz webelementlerinin yazisini sout ile yazdirabiliriz.
    2) Relative xpath(bagil): Bu xpath turu cok yaygindir//This type of xpath is very common.
     Relative xpath’in soz dizimini (syntax) yaziniz.
    ***EZBERLE: ==> //tagName[@attribute= ‘value’]
+
 <input type="email" class="form-control form" placeholder="Email" data-test="email" name="session[email]" id="session_email">
 xpath : //input[@class='form-control form']
 id    : id="session_email"
-xpath ile birden fazla attribute kullanarak arama da yapabiliriz.
+
+==> xpath ile birden fazla attribute kullanarak arama da yapabiliriz.
 			and             			or
 tüm attributeleri sağlamalı		herhangi birini sağlasa yeterli
 //div[@id='logo' or @class='flex-col logo']
@@ -140,9 +142,24 @@ xpath ile array gibi bir yapı oluşturabilirsiniz ve bir sonraki elemente gideb
 (//input[@class='form-control form'])[2] - örnek kullanım
 -------------------------------------------------------------
 //input[@type='email'] -> tagName input olan, attribute olarak type='email'
-//*[@type='email'] -> tagName ne olursa olsun, attribute olrk type='email'
+//*[@type='email'] -> tagName (*)ne olursa olsun, attribute olarak type='email'
 					  type='email' e sahip tüm webelementleri bulur.
 //*[.='Sign up'] -> içerdiği yazı Sign up olan tüm webelementleri bulur.
 //*[(text()='Sign up')] -> üsttekinin aynısı
 //div[.='Sign up'] -> içerdiği yazı Sign up olan ve tagnamei "div" tüm webelementleri bulur.
 //*[contains(text(),'ign')]  -> içerisinde "ign" geçen tüm elementleri bulur. (örnek : Sign in ya da Sign out' u bulabilir.)
+
+BEKLEME KOMUTU: //Sayfa acilmasinda sorun yasayanlar kullanabilir.
+    try{
+    Thread.sleep(3000);
+    }catch(InterruptedException e){
+    }
+
+Css selector xpath'e benzer. Üç ana tip kullanılır.
+<input type="email" class="form-control" placeholder="Email" data-test="email" name="session[email]" id="session_email"> ● css = “tagName[attribute name='value']”
+○ driver.findElement(By.cssSelector("input[name='session[email]']"));
+● css="tagName#id value" or just css="#id value"=>yalnızca id value ile çalışır
+○ driver.findElement(By.cssSelector("input#session_email"));
+● css="tagName.class value" or just css=".class value"=>yalnızca class value ile çalışır
+○ driver.findElement(By.cssSelector("input.form-control"));
+

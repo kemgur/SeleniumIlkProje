@@ -30,7 +30,8 @@ id: Bir locators'tir. webelementlerin id attribute'u kullanarak element bulunabi
 infrastructure-(infstrakçir): Altyapi
 improve: Gelistirme, iyilestirme,
 invoke: çagirmak,
-impediment: engel
+Interrupted-(inurepdid):aksak, kesik, kesildi,
+impediment-(impedement): engel
 involved-(invold): dagil,
 install: (v)kurmak, yerlestirmek, yuklemek,
 inspect: (v) denetlemek, incelemek, teftis etmek, yoklamak
@@ -59,6 +60,7 @@ Task: (n)Gorev, is, odev, (v) is vermek, calistirmak, yormak,
 Test Otomasyonu: Bir sistemi bir otomasyon aracı yardımıyla test etmeye
                  ‘Test Otomasyonu’ denir.
 Termination: Sonlandirma,
+Threat-(dreed): Konu, vida diši,
 Tools: Araclar
 turnaround time: Ger donus suresi
 training-(treyning): Egitim
